@@ -49,6 +49,7 @@
         xueNode = document.querySelector('.xue');
 
         // if localStorage.x exist, which means the xue_value stored before, assign it to max.
+        // 防止之前游戏“白玩”。
         if(localStorage.x){
             max = localStorage.x;
             xueNode.style.width = max + 'px'; //as a result, re-fresh page or open a new tab, xue_value remains the old value.

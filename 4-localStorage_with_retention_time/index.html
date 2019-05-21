@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    数据：
+    <input type="text" name="" id="data_input">
+    存储时间：
+    <input type="text" name="" id="retention_time">
+    <button id="btn">保存</button>
+    数据显示：
+    <span id="span">暂无数据</span>
+
+    <script type="text/javascript">
+        // 需求： localStorage可以设置数据存储时间，过期清除数据。
+        var nowTime = new Date().getMinutes();
+
+        if(nowTime >= localStorage.timer){
+            localStorage.clear();
+        }else{
+            if(localStorage.slx){
+               span.innerHTML = localStorage.slx;
+            }
+        }
+        
+        btn.onclick = function(){
+            localStorage.setItem('data_key', data_input.value);
+            localStorage.setItem('retention_time_key', 
+                                    new Date().getMinutes() + Number(retention_time.value));
+            span.innerHTML = localStorage.slx;
+        }
+
+    </script>
+</body>
+</html>
