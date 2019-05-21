@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage</title>
+</head>
+<body> 
+    <script type="text/javascript">
+        // Step1: Test setItem() API - with below code
+        console.log(localStorage);
+        localStorage.setItem('+1', 'USA');
+        localStorage.setItem('+86', 'China');
+        console.log(localStorage);
+        // Step2: Verify result - close web page and re-open. "+1","+86" is still there.
+
+        // Step3: Test getItem() API - with below code
+        console.log(localStorage.getItem('+86'));
+
+        // Step4: Test data modification - with below code
+        localStorage['+44'] = 'UK';
+        console.log(localStorage.getItem('+44'));
+        
+        // Step5: Test removeItem() API - with below code
+        localStorage.removeItem('+86');
+        console.log(localStorage.getItem('+86')); //'null'
+    </script>    
+</body>
+</html>

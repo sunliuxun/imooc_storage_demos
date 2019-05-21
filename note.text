@@ -1,0 +1,12 @@
+localStorage: 
+    - 储存时间很持久，没有时间限制。(生命周期：电脑硬件)
+    - 容量：2-5 MB
+
+sessionStorage: 
+    - 网页关闭时存储失效，刷新没事。(生命周期：网页会话)
+    - 不同浏览器不一样。
+    - url完全一致的不同的tab，无效。
+
+上面二者使用注意：
+    - 存储超出限制会扔 QuotaExceededError异常。(用try catch)
+    - 只能存string。
